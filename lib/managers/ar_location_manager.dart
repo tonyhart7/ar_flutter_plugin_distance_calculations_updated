@@ -1,3 +1,5 @@
+// ignore_for_file: unused_element
+
 import 'dart:async';
 import 'package:geolocator/geolocator.dart';
 
@@ -77,9 +79,9 @@ class ARLocationManager {
 
     // When we reach here, permissions are granted and we can
     // continue accessing the position of the device.
-    locationStream =
-        Geolocator.getPositionStream(locationSettings: LocationSettings(accuracy: LocationAccuracy.high))
-            .listen((Position position) {
+    locationStream = Geolocator.getPositionStream(
+            locationSettings: LocationSettings(accuracy: LocationAccuracy.high))
+        .listen((Position position) {
       //print(position.latitude.toString() + ', ' + position.longitude.toString());
       currentLocation = position;
     });
